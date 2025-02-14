@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend Live Coding Challenge
 
-## Getting Started
-
-First, run the development server:
-
+## Repository
+Clone the following repository to get started:
+[GitHub - fe-interview](https://github.com/frankudoags/fe-interview)
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/frankudoags/fe-interview.git
+cd fe-interview
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## API to Use
+- **Base URL:** [https://randomuser.me/api/](https://randomuser.me/api/)
+- **Documentation:** [Random User API Docs](https://randomuser.me/documentation#pagination)
+- **Query Parameter:**
+  - `results=5` → Fetches 5 users
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Task Description
+You are required to build a React component that fetches and displays random users using the **Random User API**.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Requirements
+1. Fetch 5 random users **on component mount**.
+2. Display a **loading state** while fetching data.
+3. Handle and display errors if the request fails.
+4. Render the following user details in a list:
+   - **Username**
+   - **Email**
+   - **Profile Picture (thumbnail)**
 
-## Learn More
+## Bonus (Optional Enhancements)
+- Implement **retry logic** if the request fails.
+- Add a **"Refresh Users"** button to fetch new users.
+- Improve UI with basic styling.
 
-To learn more about Next.js, take a look at the following resources:
+## Expected Output Example
+If successful, the component should display:
+```
+Loading... (if fetching data)
+```
+or
+```
+- JohnDoe (johndoe@example.com) [Profile Image]
+- JaneSmith (janesmith@example.com) [Profile Image]
+...
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
